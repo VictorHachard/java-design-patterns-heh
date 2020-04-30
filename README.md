@@ -4,4 +4,4 @@
 - TP4 - TODO, Nice start (SCOPEL)
 - TP4 (following) - TODO
 - TP5 - Pending
-- TP6 - TODO
+- TP6 - Pending
