@@ -1,13 +1,18 @@
 package be.isims.ihm.tp1.ex2;
 
-/**
- * A simple Store interface
- */
-public interface Store {
+public class Store extends Component {
 
-    /**
-     * Print the store name
-     */
-    void printStoreName();
+    private double benefice;
+    private String name;
+
+    public Store(double benefice, String name) {
+        this.benefice = benefice;
+        this.name = name;
+    }
+
+    @Override
+    public double getBenefice() {
+        return benefice;
+    }
 
 }
