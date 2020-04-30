@@ -8,6 +8,7 @@ public class Main {
 
         Province province1 = new Province("Hainaut");
         province1.addComponents(city1, city2);
+
         city1.addComponents(new Store(10, "Store1"), new Store(30, "Store2"));
         city2.addComponents(new Store(15, "Store3"), new Store(60, "Store4"));
 
