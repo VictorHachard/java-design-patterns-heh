@@ -1,7 +1,7 @@
 package be.isims.ihm.tp4.ex1;
 
-import javax.swing.*;
-import java.awt.*;
+        import javax.swing.*;
+        import java.awt.*;
 
 public class Main {
 
