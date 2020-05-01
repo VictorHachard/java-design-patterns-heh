@@ -1,13 +1,12 @@
-package be.isims.ihm.tp4.ex2;
+package be.isims.ihm.tp4bis.ex1;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class Main extends JFrame {
 
     public Main() {
-        getContentPane().add(new BankAccountFrm());
-        setSize(400,500);
+        getContentPane().add(new ConverterFrm());
+        setSize(500,150);
         setVisible(true);
     }
 

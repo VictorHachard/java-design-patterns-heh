@@ -6,7 +6,8 @@ import java.util.List;
 
 public abstract class Account {
 
-    private List<Double> balance;
+    protected List<Double> balance;
+    protected String name;
 
     public Account() {
         this.balance = new ArrayList<>();
@@ -17,7 +18,24 @@ public abstract class Account {
         this.balance.add(i);
     }
 
+    public void get(double i) {
+        this.balance.add(- i);
+    }
+
+    public boolean update() {
+        return false;
+    }
+
     public List<Double> getBalance() {
         return balance;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String toString() {
+        double sum = balance.stream().mapToDouble(a -> a).sum();
+        return "<" + this.name + "> : " + sum + " - LastOperation: " + balance.get(balance.size() -1).toString();
     }
 }

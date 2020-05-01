@@ -43,8 +43,8 @@ public class TabFile {
     public void add(int i, int data) throws IOException {
         if (i > size)
             throw new ArrayIndexOutOfBoundsException();
-        FileChannel ch = null;
-        ch = new RandomAccessFile(file, "rw").getChannel();
+
+        FileChannel ch = new RandomAccessFile(file, "rw").getChannel();
         ch.position(i*4);
         ch.force(true);
         ch.write(ByteBuffer.allocate(4).putInt(data).flip());
