@@ -34,6 +34,7 @@ public class BankAccountFrm extends JPanel {
 
         radioButton1 = new JRadioButton();
         radioButton1.setText("Add");
+        radioButton1.setSelected(true);
         buttonGroup.add(radioButton1);
         radios.add(radioButton1);
         radioButton2 = new JRadioButton();

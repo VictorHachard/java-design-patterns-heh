@@ -66,7 +66,12 @@ public class ConverterFrm extends JPanel {
             public void keyPressed(KeyEvent keyEvent) { }
             @Override
             public void keyReleased(KeyEvent keyEvent) {
-                Double usd = Double.parseDouble(textFieldEur.getText()) * 1.36077;
+                Double usd = 0.0;
+                if (! textFieldEur.getText().isEmpty()) {
+                    try {
+                        usd = Double.parseDouble(textFieldEur.getText()) * 1.36077;
+                    } catch(NumberFormatException e) { }
+                }
                 textFieldUsd.setText(usd.toString());
             }
         });
@@ -80,8 +85,14 @@ public class ConverterFrm extends JPanel {
             public void keyPressed(KeyEvent keyEvent) { }
             @Override
             public void keyReleased(KeyEvent keyEvent) {
-                Double eur = Double.parseDouble(textFieldEur.getText()) * 0.734878047;
+                Double eur = 0.0;
+                if (! textFieldUsd.getText().isEmpty()) {
+                    try {
+                        eur = Double.parseDouble(textFieldUsd.getText()) * 0.734878047;
+                    } catch(NumberFormatException ignored) { }
+                }
                 textFieldEur.setText(eur.toString());
+
             }
         });
         panelConverter.add(new JLabel("USD"));
@@ -102,10 +113,13 @@ public class ConverterFrm extends JPanel {
             public void keyPressed(KeyEvent keyEvent) { }
             @Override
             public void keyReleased(KeyEvent keyEvent) {
-                Double usd = Double.parseDouble(textFieldHt.getText()) * (1 + Double.parseDouble(textFieldTva.getText()) / 100);
-                textFieldTtv.setText(usd.toString());
-                Double eur = Double.parseDouble(textFieldTtv.getText()) / (1 + Double.parseDouble(textFieldTva.getText()) / 100);
-                textFieldHt.setText(eur.toString());
+                Double ttv, ht = 0.0;
+                if (! (textFieldTva.getText().isEmpty() || textFieldHt.getText().isEmpty() || textFieldTtv.getText().isEmpty())) {
+                    ttv = Double.parseDouble(textFieldHt.getText()) * (1 + Double.parseDouble(textFieldTva.getText()) / 100);
+                    textFieldTtv.setText(ttv.toString());
+                    ht = Double.parseDouble(textFieldTtv.getText()) / (1 + Double.parseDouble(textFieldTva.getText()) / 100);
+                    textFieldHt.setText(ht.toString());
+                }
             }
         });
 
@@ -117,8 +131,13 @@ public class ConverterFrm extends JPanel {
             public void keyPressed(KeyEvent keyEvent) { }
             @Override
             public void keyReleased(KeyEvent keyEvent) {
-                Double usd = Double.parseDouble(textFieldHt.getText()) * (1 + Double.parseDouble(textFieldTva.getText()) / 100);
-                textFieldTtv.setText(usd.toString());
+                Double res = 0.0;
+                if (! (textFieldHt.getText().isEmpty() || textFieldTva.getText().isEmpty())) {
+                    try {
+                        res = Double.parseDouble(textFieldHt.getText()) * (1 + Double.parseDouble(textFieldTva.getText()) / 100);
+                    } catch (NumberFormatException ignored) { }
+                }
+                textFieldTtv.setText(res.toString());
             }
         });
         panelTvaConverter.add(new JLabel("HT"));
@@ -131,8 +150,13 @@ public class ConverterFrm extends JPanel {
             public void keyPressed(KeyEvent keyEvent) { }
             @Override
             public void keyReleased(KeyEvent keyEvent) {
-                Double eur = Double.parseDouble(textFieldTtv.getText()) / (1 + Double.parseDouble(textFieldTva.getText()) / 100);
-                textFieldHt.setText(eur.toString());
+                Double res = 0.0;
+                if (! (textFieldHt.getText().isEmpty() || textFieldTva.getText().isEmpty())) {
+                    try {
+                        res = Double.parseDouble(textFieldTtv.getText()) / (1 + Double.parseDouble(textFieldTva.getText()) / 100);
+                    } catch (NumberFormatException ignored) { }
+                }
+                textFieldHt.setText(res.toString());
             }
         });
         panelTvaConverter.add(new JLabel("TTC"));
