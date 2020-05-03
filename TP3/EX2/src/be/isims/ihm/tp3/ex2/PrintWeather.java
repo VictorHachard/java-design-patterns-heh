@@ -1,6 +1,6 @@
 package be.isims.ihm.tp3.ex2;
 
-public class PrintWeather extends Observer {
+public class PrintWeather implements Observer {
 
     @Override
     public void update(Object o) {

@@ -2,7 +2,7 @@ package be.isims.ihm.tp3.ex2;
 
 import java.util.IntSummaryStatistics;
 
-public class PrintWeatherStatistics extends Observer {
+public class PrintWeatherStatistics implements Observer {
 
     @Override
     public void update(Object o) {
