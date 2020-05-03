@@ -6,16 +6,18 @@ public class Main {
 
     public static void main(String[] args) {
         //Test with fake folders and files
-        Folder ft = new Folder("Test");
+        Folder ft = new Folder("Test1");
         Folder ft2 = new Folder("Test2");
         Folder ft3 = new Folder("Test3");
-        ft3.addComponent(new Folder("BB2"));
-        ft2.addComponents(ft3, new be.isims.ihm.tp1.ex3.File("BB2.txt"));
-        ft.addComponents(ft2, new be.isims.ihm.tp1.ex3.File("BB.txt"));
+        ft3.addComponent(new Folder("Test4"));
+        ft2.addComponents(ft3, new be.isims.ihm.tp1.ex3.File("test1.txt"));
+        ft.addComponents(ft2, new be.isims.ihm.tp1.ex3.File("test2.txt"));
         System.out.println(ft.toString());
+        System.out.println("---------------");
 
         //Give a folder
-        String folder = "C:\\Users\\Main\\Documents\\GitHub\\HEH2\\Tp\\Java\\I\\TP1"; // Change the path to a folder this will be the root folder
+        String folder = "test"; // Change the path to a folder this will be the root folder
+        //I made a test folder in the folder project for testing
         Folder root = new Folder(folder);
         arb(new File(folder), root, true);
         System.out.println(root.toString());
