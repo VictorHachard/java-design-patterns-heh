@@ -1,7 +1,7 @@
 - TP1 - Ok (SCOPEL)
 - TP2 - Ok (SCOPEL)
 - TP3 - Ok but the observer design pattern doesn't match the one saw in class (SCOPEL)
-- TP4 - TODO, Nice start (SCOPEL)
-- TP4 (following) - TODO
-- TP5 - Pending
+- TP4 - Ok (SCOPEL)
+- TP4 (following) - Ok
+- TP5 - Ok
 - TP6 - Pending
