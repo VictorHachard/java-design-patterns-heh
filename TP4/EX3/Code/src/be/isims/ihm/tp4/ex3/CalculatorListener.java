@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class CalculatorListener implements ActionListener {
 
     private Calculator calculator;
-    private String operator, oper1Str, oper2Str = "";
+    private String operator = "", oper1Str = "", oper2Str = "";
     private Double oper1, oper2;
     private boolean reset = false;
 

@@ -12,7 +12,7 @@ public class PrintWeatherStatistics implements Observer {
         System.out.println("PrintWeatherStatistics: " +
                 "max temperature: " + stats.getMax() +
                 ", min temperature: " + stats.getMin() +
-                ", min temperature: " + stats.getAverage());
+                ", avg temperature: " + stats.getAverage());
     }
 
 }

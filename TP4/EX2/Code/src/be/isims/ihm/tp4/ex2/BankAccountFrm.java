@@ -52,11 +52,10 @@ public class BankAccountFrm extends JPanel {
                     try {
                         money = Double.parseDouble(textField.getText());
                     } catch (NumberFormatException nfe) {}
-                    if (radioButton1.isSelected()) {
+                    if (radioButton1.isSelected())
                         bank.get(comboBox.getSelectedIndex()).add(money);
-                    } else if (radioButton2.isSelected()) {
+                    else if (radioButton2.isSelected())
                         bank.get(comboBox.getSelectedIndex()).get(money);
-                    }
                     textArea.append(bank.get(comboBox.getSelectedIndex()).toString() + "\n");
                 }
             }
@@ -65,10 +64,9 @@ public class BankAccountFrm extends JPanel {
         panel.add(new JButton(new AbstractAction("Interests") {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                for (Account account: bank.getAccounts()) {
+                for (Account account : bank.getAccounts())
                     if (account.update())
                         textArea.append(account.toString() + "\n");
-                }
             }
         }));
 
