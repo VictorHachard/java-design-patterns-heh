@@ -187,7 +187,7 @@
 											"top": 371,
 											"width": 256.90234375,
 											"height": 13,
-											"text": "+Province(name: String): void",
+											"text": "+City(name: String): void",
 											"horizontalAlignment": 0
 										},
 										{
@@ -458,19 +458,19 @@
 									"subViews": [
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAFxwRFIUHhQzts=",
+											"_id": "AAAAAAFyIxU+AOK/lCc=",
 											"_parent": {
 												"$ref": "AAAAAAFxwRCvbncpq10="
 											},
 											"model": {
-												"$ref": "AAAAAAFxwRFIKXhKYPM="
+												"$ref": "AAAAAAFyIxU9/OK8PRY="
 											},
 											"font": "Arial;13;0",
 											"left": 357,
 											"top": 371,
 											"width": 256.90234375,
 											"height": 13,
-											"text": "+printStoreName(): void",
+											"text": "+Province(name: String): void",
 											"horizontalAlignment": 0
 										},
 										{
@@ -487,7 +487,7 @@
 											"top": 386,
 											"width": 256.90234375,
 											"height": 13,
-											"text": "+getBenefice(): void",
+											"text": "+getBenefice(): double",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2034,7 +2034,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFxwQ5WXnPHe2A="
 							},
-							"name": "Province",
+							"name": "City",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -2237,17 +2237,26 @@
 					"operations": [
 						{
 							"_type": "UMLOperation",
-							"_id": "AAAAAAFxwRFIKXhKYPM=",
+							"_id": "AAAAAAFyIxU9/OK8PRY=",
 							"_parent": {
 								"$ref": "AAAAAAFxwRCvbXcgNx8="
 							},
-							"name": "printStoreName",
+							"name": "Province",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
-									"_id": "AAAAAAFxxpeaUF4yx3A=",
+									"_id": "AAAAAAFyIxWZCeOfsTA=",
 									"_parent": {
-										"$ref": "AAAAAAFxwRFIKXhKYPM="
+										"$ref": "AAAAAAFyIxU9/OK8PRY="
+									},
+									"name": "name",
+									"type": "String"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFyIxWZCeOgqHQ=",
+									"_parent": {
+										"$ref": "AAAAAAFyIxU9/OK8PRY="
 									},
 									"type": "void",
 									"direction": "return"
@@ -2268,7 +2277,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFxytpFMfcbS/A="
 									},
-									"type": "void",
+									"type": "double",
 									"direction": "return"
 								}
 							]

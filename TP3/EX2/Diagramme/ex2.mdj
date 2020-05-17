@@ -872,30 +872,13 @@
 											"height": 13,
 											"text": "+WeatherStation()",
 											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAFxyKjsICpEVYc=",
-											"_parent": {
-												"$ref": "AAAAAAFxyKeI9inr3Z4="
-											},
-											"model": {
-												"$ref": "AAAAAAFxyKjr+CpBmks="
-											},
-											"font": "Arial;13;0",
-											"left": 165,
-											"top": 514,
-											"width": 167.29248046875,
-											"height": 13,
-											"text": "+Operation1()",
-											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 160,
 									"top": 494,
 									"width": 177.29248046875,
-									"height": 38
+									"height": 23
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -935,7 +918,7 @@
 							"left": 160,
 							"top": 416,
 							"width": 177.29248046875,
-							"height": 116,
+							"height": 101,
 							"nameCompartment": {
 								"$ref": "AAAAAAFxyKeI9SnlGLs="
 							},
@@ -2220,14 +2203,6 @@
 								"$ref": "AAAAAAFxyKeI9SniiAE="
 							},
 							"name": "WeatherStation"
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAFxyKjr+CpBmks=",
-							"_parent": {
-								"$ref": "AAAAAAFxyKeI9SniiAE="
-							},
-							"name": "Operation1"
 						}
 					]
 				},
