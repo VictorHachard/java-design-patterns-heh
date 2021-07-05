@@ -5,7 +5,9 @@ import java.awt.*;
 public class DrawCanvas extends Canvas {
 
     private Color color;
-    private int redValue, greenValue, blueValue;
+    private int redValue;
+    private int greenValue;
+    private int blueValue;
 
     public DrawCanvas() {
         setSize(350, 350);
@@ -33,5 +35,5 @@ public class DrawCanvas extends Canvas {
     public void setBlueValue(int blueValue) {
         this.blueValue = blueValue;
     }
-    
+
 }

@@ -1,7 +1,6 @@
 package be.isims.ihm.tp4.ex2;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public abstract class Account {

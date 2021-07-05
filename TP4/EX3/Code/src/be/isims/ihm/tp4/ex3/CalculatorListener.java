@@ -7,7 +7,9 @@ import java.awt.event.ActionListener;
 public class CalculatorListener implements ActionListener {
 
     private Calculator calculator;
-    private String operator = "", oper1Str = "", oper2Str = "";
+    private String operator = "";
+    private String oper1Str = "";
+    private String oper2Str = "";
     private Double oper1, oper2;
     private boolean reset = false;
 
@@ -43,6 +45,8 @@ public class CalculatorListener implements ActionListener {
                 case "/":
                     calculator.getField().setText(calculator.getField().getText() + div().toString());
                     break;
+                default:
+                    calculator.getField().setText(calculator.getField().getText() + add().toString());
             }
             reset = true;
         } else if (isOperator(buttonText)) {

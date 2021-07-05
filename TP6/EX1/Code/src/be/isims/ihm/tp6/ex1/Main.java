@@ -1,8 +1,6 @@
 package be.isims.ihm.tp6.ex1;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Main {
 

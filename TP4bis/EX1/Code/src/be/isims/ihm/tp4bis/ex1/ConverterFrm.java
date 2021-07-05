@@ -113,7 +113,8 @@ public class ConverterFrm extends JPanel {
             public void keyPressed(KeyEvent keyEvent) { }
             @Override
             public void keyReleased(KeyEvent keyEvent) {
-                Double ttv, ht = 0.0;
+                Double ttv = 0.0;
+                Double ht = 0.0;
                 if (! (textFieldTva.getText().isEmpty() || textFieldHt.getText().isEmpty() || textFieldTtv.getText().isEmpty())) {
                     ttv = Double.parseDouble(textFieldHt.getText()) * (1 + Double.parseDouble(textFieldTva.getText()) / 100);
                     textFieldTtv.setText(ttv.toString());

@@ -7,7 +7,9 @@ public class SliderColor extends JPanel {
 
     private DrawCanvas canvas = new DrawCanvas();
     private JLabel rgbValue = new JLabel("");
-    private JSlider sliderR, sliderG, sliderB;
+    private JSlider sliderR;
+    private JSlider sliderG;
+    private JSlider sliderB;
 
     public SliderColor() {
         sliderR = getSlider(0, 255, 0, 50, 5);

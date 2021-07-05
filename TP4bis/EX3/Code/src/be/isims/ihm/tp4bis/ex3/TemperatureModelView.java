@@ -1,7 +1,6 @@
 package be.isims.ihm.tp4bis.ex3;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class TemperatureModelView extends JPanel {
 
