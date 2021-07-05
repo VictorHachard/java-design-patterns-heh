@@ -1,7 +1,6 @@
 package be.isims.ihm.tp4.ex2;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class Main extends JFrame {
 

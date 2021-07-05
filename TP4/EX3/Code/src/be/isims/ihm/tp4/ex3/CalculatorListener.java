@@ -10,7 +10,8 @@ public class CalculatorListener implements ActionListener {
     private String operator = "";
     private String oper1Str = "";
     private String oper2Str = "";
-    private Double oper1, oper2;
+    private Double oper1;
+    private Double oper2;
     private boolean reset = false;
 
     public CalculatorListener(Calculator calculator) {
@@ -47,6 +48,7 @@ public class CalculatorListener implements ActionListener {
                     break;
                 default:
                     calculator.getField().setText(calculator.getField().getText() + add().toString());
+                    break;
             }
             reset = true;
         } else if (isOperator(buttonText)) {
@@ -90,14 +92,7 @@ public class CalculatorListener implements ActionListener {
     }
 
     private boolean isOperator(String str) {
-        switch (str) {
-            case "+":
-            case "*":
-            case "-":
-            case "/":
-                return true;
-        }
-        return false;
+      return str.equals("+") || str.equals("*") || str.equals("-") || str.equals("/");
     }
 
     private boolean isEqual(String str) {
