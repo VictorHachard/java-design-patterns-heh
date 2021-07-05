@@ -1,8 +1,8 @@
 package be.isims.ihm.tp3.ex1;
 
-        import java.util.ArrayList;
-        import java.util.Arrays;
-        import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Observable {
 
@@ -13,23 +13,16 @@ public class Observable {
     }
 
     public void notifyAllObservers() {
-        for (Observer observer: observers)
+        for (Observer observer: observers) {
             observer.update(this);
+        }
     }
 
-    public void addObserver(Observer observer) {
-        this.observers.add(observer);
-    }
-
-    public void addObservers(Observer... observers) {
+    public void addObserver(Observer... observers) {
         this.observers.addAll(Arrays.asList(observers));
     }
 
-    public void removeObserver(Observer observer) {
-        this.observers.remove(observer);
-    }
-
-    public void removeObservers(Observer... observers) {
+    public void removeObserver(Observer... observers) {
         this.observers.removeAll(Arrays.asList(observers));
     }
 

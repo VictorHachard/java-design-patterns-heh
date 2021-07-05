@@ -18,19 +18,11 @@ public class Observable {
         }
     }
 
-    public void addObserver(Observer observer) {
-        this.observers.add(observer);
-    }
-
-    public void addObservers(Observer... observers) {
+    public void addObserver(Observer... observers) {
         this.observers.addAll(Arrays.asList(observers));
     }
 
-    public void removeObserver(Observer observer) {
-        this.observers.remove(observer);
-    }
-
-    public void removeObservers(Observer... observers) {
+    public void removeObserver(Observer... observers) {
         this.observers.removeAll(Arrays.asList(observers));
     }
 

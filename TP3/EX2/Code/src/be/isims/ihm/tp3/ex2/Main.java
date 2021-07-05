@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         WeatherStation ws = new WeatherStation();
 
-        ws.addObservers(new PrintWeather(), new PrintWeatherStatistics());
+        ws.addObserver(new PrintWeather(), new PrintWeatherStatistics());
 
         ws.setTemperatureHumidity(20, 50);
         ws.setTemperatureHumidity(25, 65);

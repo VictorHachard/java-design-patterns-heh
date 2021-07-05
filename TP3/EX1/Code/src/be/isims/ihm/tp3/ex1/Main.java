@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 	    Input input = new Input();
 
-	    input.addObservers(new BinaryObserver(), new OctalObserver(), new HexaObserver());
+	    input.addObserver(new BinaryObserver(), new OctalObserver(), new HexaObserver());
 
         input.setNumber(10);
 
