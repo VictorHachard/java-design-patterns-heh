@@ -13,4 +13,4 @@ All the Java TP from the HEH second year.
 
 ## Authors & Contributors
 
-*   **Hachard Victor** - *Initial work* - [VictorHachard](https://github.com/VictorHachard)
+-   **Hachard Victor** - *Initial work* - [VictorHachard](https://github.com/VictorHachard)
